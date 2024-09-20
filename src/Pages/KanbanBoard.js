@@ -17,7 +17,7 @@ const KanbanBoard = (props) => {
     };
     return (
         <>
-            <div className='kbhead mx-5'>
+            <div className='kbhead'>
                 <div className='cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
                     <DropdownButton ></DropdownButton>
                 </div>
@@ -27,19 +27,22 @@ const KanbanBoard = (props) => {
                 }
 
             </div>
-            <div className='kbbody mx-5' onClick={() => setIsOpen(false)}>
+            <div className='kbbody' onClick={() => setIsOpen(false)}>
                 {
                     data && data.length &&
-                    <Board groupedData={data}></Board>
+                    <Board groupBy={groupBy} groupedData={data}></Board>
                 }
             </div>
             <style jsx>{`
                 .kbhead {
                     width: 100%;
+                    margin-bottom: 10px;
+                    margin-left: 10px;
                 }
                 .kbbody {
-                    width: 100%;
+                    width: 98%;
                     background-color: #f5f6fa;
+                    padding: 10px;
                 }
         `}</style>
         </>

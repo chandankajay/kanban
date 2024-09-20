@@ -2,11 +2,16 @@ import React from 'react'
 import high from '../assets/icons_FEtask/HighPriority.svg'
 import add from '../assets/icons_FEtask/add.svg'
 import dotmenu from '../assets/icons_FEtask/3dotmenu.svg'
-const GroupHead = ({ group }) => {
+const GroupHead = ({ groupBy, group }) => {
     return (
         <div className='grouphead flex flex-row'>
             <div className='iconGroup flex flex-row'>
-                <img src={high} alt='high' />
+                {
+                    groupBy === 'userId' ?
+                    <>{group.icon}</>
+                    :
+                    <img src={group.icon} alt='icon' />
+                }
                 <label>{group.name}</label>
             </div>
             <div className='iconGroup flex flex-row'>

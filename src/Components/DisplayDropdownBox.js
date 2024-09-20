@@ -65,22 +65,22 @@ function DisplayDropdownBox(props) {
                 }
 
                 .dropdown-box {
-                position: absolute;
-                width: 100%;
-                top: 100%;
-                left: 0;
-                margin-top: 8px;
-                background-color: #fff;
-                border: 1px solid #ccc;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                padding: 10px;
-                z-index: 10;
+                    position: absolute;
+                    width: 100%;
+                    top: 100%;
+                    left: 0;
+                    margin-top: 8px;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    padding: 10px;
+                    z-index: 10;
                 }
 
                 .dropdown-box label {
-                display: block;
-                font-weight: bold;
-                margin-bottom: 5px;
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 5px;
                 }
 
       `}</style>

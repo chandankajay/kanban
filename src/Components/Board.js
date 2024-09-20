@@ -1,14 +1,14 @@
 import React from 'react';
 import GroupHead from './GroupHead';
 import GroupItems from './GroupItems';
-const Board = ({ groupedData }) => {
+const Board = ({ groupBy, groupedData }) => {
   return (
-    <div className="kanban-board flex flex-row">
+    <div className="kanban-board flex flex-row justify-between">
       {groupedData.map((group, index) => (
         <div key={index} className="kanban-column">
-          <GroupHead group={group}> </GroupHead>
+          <GroupHead groupBy={groupBy} group={group}> </GroupHead>
           <div >
-           <GroupItems items = {group.items}></GroupItems>
+           <GroupItems groupBy={groupBy} items = {group.items}></GroupItems>
           </div>
         </div>
       ))}
@@ -16,8 +16,7 @@ const Board = ({ groupedData }) => {
       <style jsx>{`
         .kanban-board {
             width: 100%;
-            padding: 4px;
-            gap: 10px;
+            align-items: flex-start;  
         }
       `}</style>
       </div>
